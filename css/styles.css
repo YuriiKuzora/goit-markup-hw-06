@@ -13,6 +13,7 @@
    --border-header-color: #ECECEC;
    --border-coption-color: #AFB1B8;
    --color-icon: #AFB1B8;
+   --transition-animacion: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -183,13 +184,13 @@ img {
 .contact-link-item:hover,
 .contact-link-item:focus {
    color: var(--button-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 .contact-link-item:hover .contact-list-icon,
 .contact-link-item:focus .contact-list-icon {
    fill: var(--button-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 
@@ -403,7 +404,7 @@ img {
 .social-list-user-link:hover,
 .social-list-user-link:focus {
    background-color: var(--button-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 .social-list-icon {
@@ -415,7 +416,7 @@ img {
 .social-list-user-link:hover .social-list-icon,
 .social-list-user-link:focus .social-list-icon {
    fill: var(--text-color-white);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 /* ?Section 5 */
@@ -444,7 +445,7 @@ img {
 .slogan-list-item:hover,
 .slogan-list-item:focus {
    border: 1px solid var(--button-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 .slogan-list-icon {
@@ -456,7 +457,7 @@ img {
 .slogan-list-item:hover .slogan-list-icon,
 .slogan-list-item:focus .slogan-list-icon {
    fill: var(--button-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 /* ?Footer */
@@ -544,7 +545,7 @@ img {
 .social-list-link:hover,
 .social-list-link:focus {
    background-color: var(--button-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 
@@ -625,7 +626,7 @@ img {
 .list .button:hover,
 .list .button:focus {
    background-color: var(--button-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
    color: var(--text-color-white);
    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -643,7 +644,7 @@ img {
 
 .items-shadow:hover {
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 .items:nth-child(3n) {
@@ -710,7 +711,7 @@ img {
 .items-shadow:hover .overlay,
 .items-shadow:focus .overlay {
    transform: translateY(0%);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: var(--transition-animacion);
 }
 
 /* ?Модальне вікно */
@@ -762,8 +763,7 @@ img {
 .modal-close-btn:focus,
 .modal-close-btn:hover {
    fill: var(--button-color);
-   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: opacity var(--transition-animacion);
 }
 
 /* ?Форми(модальне вікно) */
@@ -805,6 +805,7 @@ img {
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
    padding-left: 42px;
+   transition: border-color var(--transition-animacion);
 }
 
 .modal-form-input-wrapper {
@@ -818,21 +819,16 @@ img {
    top: 50%;
    left: 12px;
    transform: translateY(-50%);
+   transition: background-color var(--transition-animacion);
 }
 
-.modal-form-input:hover,
 .modal-form-input:focus {
    border: 1px solid var(--button-color);
    outline: none;
-   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input:focus+.modal-form-input-icon,
-.modal-form-input:hover+.modal-form-input-icon {
+.modal-form-input:focus+.modal-form-input-icon {
    fill: var(--button-color);
-   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-message {
@@ -841,4 +837,12 @@ img {
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
    margin-bottom: 20px;
+   padding: 12px 16px;
+   resize: none;
+   transition: border-color var();
+}
+
+.modal-form-message:focus {
+   outline: none;
+   border-color: var(--button-color);
 }
