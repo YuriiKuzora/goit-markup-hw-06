@@ -473,17 +473,20 @@ img {
    background-color: var(--background-color-fond);
    padding-top: 60px;
    padding-bottom: 60px;
+}
 
+.footer-web-contact {
+   margin-right: 93px;
 }
 
 .footer-list {
    display: flex;
    align-items: baseline;
+   justify-content: space-between;
 }
 
 .logo-address {
    width: auto;
-   margin-right: 70px;
 }
 
 .logo-footer {
@@ -522,18 +525,18 @@ img {
 
 /* ?Приєднуйся */
 
-.footer-list {
-   margin-right: 93px;
+.footer-web-contatact-sign-up {
+   display: flex;
 }
 
-.web-contact-list {
-   color: var(--text-color-white);
-   margin-bottom: 20px;
-
+.web-contact-list,
+.sign-up-text {
    font-weight: 700;
    font-size: 14px;
    line-height: 1.14;
    text-transform: uppercase;
+   color: var(--text-color-white);
+   margin-bottom: 20px;
 }
 
 .social-list {
@@ -561,15 +564,6 @@ img {
 
 /* ?Підпишіться на розсилку */
 
-.sign-up-text {
-   font-weight: 700;
-   font-size: 14px;
-   line-height: 1.14;
-   text-transform: uppercase;
-   color: var(--text-color-white);
-   margin-bottom: 20px;
-}
-
 .footer-form {
    display: flex;
    column-gap: 12px;
@@ -579,31 +573,42 @@ img {
    display: flex;
 }
 
-.input-text {
+.footer-form-input {
+   position: relative;
+   display: block;
    width: 358px;
    height: 50px;
+   padding-left: 16px;
    background-color: var(--background-color-fond);
    border: 1px solid rgba(255, 255, 255, 0.3);
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
    border-radius: 4px;
    margin-right: 12px;
+   color: rgba(255, 255, 255, 0.6);
 }
 
-.sign-up-button {
+.footer-form-input::placeholder {
+   font-size: 16px;
+   line-height: 1.25;
    display: flex;
    align-items: center;
+   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form-input:focus {
+   outline: none;
+}
+
+.footer-form-submit {
+   display: flex;
+   column-gap: 10px;
    justify-content: center;
 }
 
-.button-text {
-   margin-right: 10px;
-}
-
-.button-icon {
+.footer-form-submit-icon {
    width: 24px;
    height: 24px;
 }
-
 
 /* ?Portfolio */
 
@@ -893,6 +898,7 @@ img {
 
 .modal-form-check:checked+.modal-form-checkbox-icon .modal-form-checkbox-icon-on {
    display: block;
+   transition: var(--transition-animacion);
 }
 
 .modal-form-check:focus+.modal-form-checkbox-icon {
@@ -916,7 +922,8 @@ img {
    color: var(--button-color);
 }
 
-.modal-form-submit {
+.modal-form-submit,
+.footer-form-submit {
    width: 200px;
    height: 50px;
    background-color: var(--modal-butoon);
