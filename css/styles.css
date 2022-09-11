@@ -522,6 +522,10 @@ img {
 
 /* ?Приєднуйся */
 
+.footer-list {
+   margin-right: 93px;
+}
+
 .web-contact-list {
    color: var(--text-color-white);
    margin-bottom: 20px;
@@ -556,10 +560,19 @@ img {
 
 
 /* ?Підпишіться на розсилку */
-/* 
-.sign-up {
-   padding-top: 10px;
-   padding-left: 83px;
+
+.sign-up-text {
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.14;
+   text-transform: uppercase;
+   color: var(--text-color-white);
+   margin-bottom: 20px;
+}
+
+.footer-form {
+   display: flex;
+   column-gap: 12px;
 }
 
 .sign-up-form {
@@ -589,7 +602,7 @@ img {
 .button-icon {
    width: 24px;
    height: 24px;
-} */
+}
 
 
 /* ?Portfolio */
