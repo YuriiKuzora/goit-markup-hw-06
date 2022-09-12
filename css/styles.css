@@ -90,8 +90,6 @@ img {
 /* ?Header */
 
 .page-header {
-   /* padding-top: 24px;
-   padding-bottom: 25px; */
    border-bottom: 1px solid var(--border-header-color);
 }
 
@@ -475,17 +473,15 @@ img {
    padding-bottom: 60px;
 }
 
-.footer-web-contact {
-   margin-right: 93px;
-}
-
 .footer-list {
    display: flex;
    align-items: baseline;
    justify-content: space-between;
 }
 
-.logo-address {
+.logo-address,
+.footer-web-contact,
+.sign-up {
    width: auto;
 }
 
